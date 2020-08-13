@@ -27,5 +27,9 @@ public class InformacionAdicionalProfesor {
 
     public void setBonoFijo(double BonoFijo) {
         this.BonoFijo = BonoFijo;
-    }   
+    }  
+    
+    public double calcularSueldo(){
+        return añosdeTrabajo*600 + BonoFijo;
+    }  
 }
