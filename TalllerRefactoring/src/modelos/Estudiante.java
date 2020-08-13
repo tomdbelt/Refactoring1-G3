@@ -110,7 +110,7 @@ public class Estudiante{
         double notaTotal=0;
         for(Paralelo par:paralelos){
             if(p.equals(par)){
-                notaTotal=(p.getMateria().notaInicial+p.getMateria().notaFinal)/2;
+                notaTotal=(p.getMateria().getNotaTotal()+p.getMateria().getNotaFinal())/2;
                 
             }
         }
