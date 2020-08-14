@@ -6,19 +6,20 @@ public class Profesor extends Persona {
     public String codigo;
     public InformacionAdicionalProfesor info;
 
-    public Profesor(String codigo, String nombre, String apellido, String facultad, int edad, String direccion, String telefono) {
+    private Profesor(String codigo, Persona persona) {
         this.codigo = codigo;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.edad = edad;
-        this.direccion = direccion;
-        this.telefono = telefono;
+        this.nombre = persona.getNombre();
+        this.apellido = persona.getApellido();
+        this.edad = persona.getEdad();
+        this.facultad = persona.getFacultad();
+        this.direccion = persona.getDireccion();
+        this.telefono = persona.getTelefono();
         paralelos= new ArrayList<>();
     }
     
     public void anadirParalelos(Paralelo p){
         paralelos.add(p);
     }
-    
+
     
 }

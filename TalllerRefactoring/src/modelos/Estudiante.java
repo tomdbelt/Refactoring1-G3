@@ -2,17 +2,10 @@ package modelos;
 
 import java.util.ArrayList;
 
-public class Estudiante{
+public class Estudiante extends Persona{
     //Informacion del estudiante
     public String matricula;
-    public String nombre;
-    public String apellido;
-    public String facultad;
-    public int edad;
-    public String direccion;
-    public String telefono;
-    public ArrayList<Paralelo> paralelos;
-    
+
     //Getter y setter de Matricula
 
     public String getMatricula() {
@@ -22,34 +15,8 @@ public class Estudiante{
     public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
-
-    //Getter y setter del Nombre
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
     
-    //Getter y setter del Apellido
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-    
-    //Getter y setter de la Facultad
-    public String getFacultad() {
-        return facultad;
-    }
-
-    public void setFacultad(String facultad) {
-        this.facultad = facultad;
-    }
-    
+<<<<<<< HEAD
     //Getter y setter de la edad
     public int getEdad() {
         return edad;
@@ -84,6 +51,9 @@ public class Estudiante{
     public double getNotaPractico(Notas notas){
         return (notas.getNtalleres())*0.20;
     }
+=======
+        //Calcula y devuelve la nota final contando examen, deberes, lecciones y talleres. El teorico y el practico se calcula por parcial.
+>>>>>>> 84b0168b706366f0a5404f96fd2baf5e768a11cc
     
     public double CalcularNota(Paralelo p, Notas notasP,Notas notasT){
         double nota=0;
