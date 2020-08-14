@@ -17,9 +17,13 @@ public class Profesor extends Persona {
         paralelos= new ArrayList<>();
     }
     
+    @Override
     public void anadirParalelos(Paralelo p){
         paralelos.add(p);
     }
-
     
+    @Override
+    public void removerParalelos(Paralelo paralelo){
+        paralelos.remove(paralelo);
+    }   
 }

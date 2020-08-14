@@ -1,6 +1,5 @@
 package modelos;
 
-import java.util.ArrayList;
 
 public class Estudiante extends Persona{
     //Informacion del estudiante
@@ -27,29 +26,42 @@ public class Estudiante extends Persona{
     }
     
     //Getter y setter de la direccion
-    public String getDireccion() {
+    @Override
+    public Direccion getDireccion() {
         return direccion;
     }
 
-    public void setDireccion(String direccion) {
+    @Override
+    public void setDireccion(Direccion direccion) {
         this.direccion = direccion;
     }
     
     //Getter y setter del telefono
-
-    public String getTelefono() {
+    @Override
+    public Telefono getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(String telefono) {
+    @Override
+    public void setTelefono(Telefono telefono) {
         this.telefono = telefono;
     }
     
-     public Paralelo obtenerParalelo(Paralelo p){
+    public Paralelo obtenerParalelo(Paralelo p){
         for(Paralelo par:paralelos){
             if(p.equals(par))
                 return p;
         }
         return null;
     }
+    
+    @Override
+    public void anadirParalelos(Paralelo p){
+        paralelos.add(p);
+    }
+    
+    @Override
+    public void removerParalelos(Paralelo paralelo){
+        paralelos.remove(paralelo);
+    }  
 }       

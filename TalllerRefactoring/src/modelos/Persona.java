@@ -73,7 +73,6 @@ public class Persona {
     }
     
     //Getter y setter del telefono
-
     public Telefono getTelefono() {
         return telefono;
     }
@@ -81,8 +80,15 @@ public class Persona {
     public void setTelefono(Telefono telefono) {
         this.telefono = telefono;
     }
-    @HotSpotIntrinsicCandidate
-    public Persona() {
+    
+    public void anadirParalelos(Paralelo paralelo) {
+        paralelos.add(paralelo);
     }
     
+    public void removerParalelos(Paralelo paralelo){
+        paralelos.remove(paralelo);
+    }
+    
+    public Persona() {
+    } 
 }
