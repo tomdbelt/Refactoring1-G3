@@ -16,18 +16,15 @@ public class Persona {
     public String nombre;
     public String apellido;
     public int edad;
-    public String direccion;
+    public Direccion direccion;
     public String facultad;
-    public String telefono;
+    public Telefono telefono;
     public ArrayList<Paralelo> paralelos;
 
-    public Persona(String nombre, String apellido, int edad, String direccion, String facultad, String telefono, ArrayList<Paralelo> paralelos) {
+    public Persona(String nombre, String apellido, String facultad,ArrayList<Paralelo> paralelos) {
         this.nombre = nombre;
         this.apellido = apellido;
-        this.edad = edad;
-        this.direccion = direccion;
         this.facultad = facultad;
-        this.telefono = telefono;
         this.paralelos = paralelos;
     }
     //Getter y setter del Nombre
@@ -67,21 +64,21 @@ public class Persona {
     }
     
     //Getter y setter de la direccion
-    public String getDireccion() {
+    public Direccion getDireccion() {
         return direccion;
     }
 
-    public void setDireccion(String direccion) {
+    public void setDireccion(Direccion direccion) {
         this.direccion = direccion;
     }
     
     //Getter y setter del telefono
 
-    public String getTelefono() {
+    public Telefono getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(String telefono) {
+    public void setTelefono(Telefono telefono) {
         this.telefono = telefono;
     }
     @HotSpotIntrinsicCandidate
