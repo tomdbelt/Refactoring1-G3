@@ -38,5 +38,12 @@ public class Paralelo {
         //No es necesario implementar
     }
     
-    
+    //Se puede usar para calcular la nota de cualquiera de los parciales
+    public double CalcularNotaParcial(Notas notas){       
+        return notas.getNotaTeorico()+ notas.getNotaPractico();     
+    }
+      
+    public double CalcularNotaTotal(){
+        return (getMateria().getNotaTotal()+getMateria().getNotaFinal())/2;    
+    }
 }

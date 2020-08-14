@@ -38,4 +38,10 @@ public class Notas {
         return ntalleres;
     }
     
+    public double getNotaTeorico(){
+        return (getNexamen() + getNdeberes() + getNlecciones())*0.80;
+    } 
+    public double getNotaPractico(){
+        return getNtalleres()*0.20;
+    }
 }
